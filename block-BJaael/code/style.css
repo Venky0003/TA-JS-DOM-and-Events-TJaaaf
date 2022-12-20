@@ -33,3 +33,34 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* custom styles */
+.heading{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.container{
+  max-width: 1380px;
+  width:100%;
+  margin:0 auto;
+  padding: 0 2rem;
+}
+.flex{
+  display: flex;
+}
+.flex-100{
+  flex:0 1 100%;
+}
+.flex-10{
+  flex:0 1 10%;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.box{
+  width:4rem;
+  height:4rem;
+  border:1px solid black;
+  text-align: center;
+}
+
