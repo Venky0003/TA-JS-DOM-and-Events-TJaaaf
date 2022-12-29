@@ -91,3 +91,14 @@ input[type='text'] {
 .terms {
   display: inline-block;
 }
+.model{
+  width:25rem;
+  background-color: white;
+  padding:1rem;
+  visibility:hidden;
+  margin: 2rem auto;
+}
+.font{
+  font-size :1.3rem;
+  font-weight: 500;
+}
