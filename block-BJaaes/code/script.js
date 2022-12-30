@@ -3,6 +3,7 @@ let errorMsg = {};
 function displayError(name){
     form.elements[name].nextElementSibling.innerText = errorMsg[name];
     form.elements[name].classList.add("error");
+   // console.log(form.elements[name]);
 }
 
 function handleSubmit(event){
