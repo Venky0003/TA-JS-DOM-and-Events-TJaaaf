@@ -93,3 +93,9 @@ input[type='text'] {
 .center{
   text-align: center;
 }
+.error{
+  border:3px solid red;
+}
+.succes{
+  border:1px solid green;
+}
