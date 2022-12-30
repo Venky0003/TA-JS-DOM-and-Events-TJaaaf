@@ -42,10 +42,7 @@ function handleSubmit(event){
     if(moviename){
         let addlist = document.getElementById('watchList');
 
-        let checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-    
-
+        
         let li = document.createElement('li');
         li.innerText = moviename;
 
