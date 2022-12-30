@@ -44,10 +44,15 @@ function handleSubmit(event){
 
         
         let li = document.createElement('li');
-        li.innerText = moviename;
+        li.style.display = "flex";
+        let checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        
+        li.append(checkbox);
 
-        // let checkbox = document.createElement('input');
-        // checkbox.type = 'checkbox';
+        let p = document.createElement('p');
+        p.innerText = moviename;
+        li.append(p);
 
         let deleteBtn = document.createElement('span');
         deleteBtn.classList.add("delete-Btn")
@@ -56,7 +61,6 @@ function handleSubmit(event){
 
         
         addlist.append(li);
-        li.append(checkbox);
         li.append(deleteBtn);
     }
 }
