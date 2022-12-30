@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Movie Watch List</title>
   </head>
   <body>
+    <div>
+      <form class="container">
+        <div class="form-control">
+          <label for="movie">movie</label>
+          <input
+            id="movie"
+            type="text"
+            name="movie"
+            placeholder="Enter the movie name"
+          />
+          <small></small>
+        </div>
+        <h3>My Watch List</h3>
+        <ul id="watchList">
+        </ul>
+      </form>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
