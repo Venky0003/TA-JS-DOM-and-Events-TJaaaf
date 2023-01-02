@@ -39,6 +39,7 @@ function handleToggle(event){
 let allButton = document.createElement("button");
 allButton.innerText = "All";
 allButton.addEventListener("click", () => {
+    updateActiveButton("All");
     createUI(allTodos, rootElm);
 });
 
@@ -47,6 +48,7 @@ let activeButton = document.createElement("button");
 activeButton.innerText = "Active";
 activeButton.addEventListener("click", () => {
     let activeTodos = allTodos.filter(todo => !todo.isDone);
+    updateActiveButton("Active");
     createUI(activeTodos, rootElm);
 });
 
@@ -56,11 +58,22 @@ completedButton.innerText = "Completed";
 completedButton.addEventListener("click", () => {
     let completedTodos = allTodos.filter(todo =>todo.isDone
     );
+    updateActiveButton("Completed");
+
     createUI(completedTodos, rootElm);
 });
 
+//adding clear completed button
+let clearCompletedButton = document.createElement("button");
+clearCompletedButton.innerText = "Clear-Completed";
+clearCompletedButton.addEventListener("click", () => {
+    allTodos = allTodos.filter(todo => !todo.isDone);
+    localStorage.setItem("todos", JSON.stringify(allTodos));
+    createUI(allTodos,rootElm);
+});
 
-filter.append(allButton,activeButton,completedButton)
+
+filter.append(allButton,activeButton,completedButton,clearCompletedButton)
 function createUI(data,rootElm){
     rootElm.innerHTML="";
     data.forEach((todo,index)=>{
@@ -91,5 +104,19 @@ function createUI(data,rootElm){
 }
 createUI(allTodos,rootElm);
 
-
+function updateActiveButton(btn){
+    allButton.classList.remove("selected");
+    activeButton.classList.remove("selected");
+    completedButton.classList.remove("selected");
+    if (btn === "All") {
+        allButton.classList.add("selected")
+    }
+    if (btn === "Active") {
+        activeButton.classList.add("selected")
+    }
+    if (btn === "Completed") {
+        completedButton.classList.add("selected")
+    }
+    
+}
 inputText.addEventListener("keyup",handleInput);
