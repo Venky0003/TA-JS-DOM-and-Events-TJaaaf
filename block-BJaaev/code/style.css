@@ -130,3 +130,7 @@ button:hover{
 .line-through{
     text-decoration: line-through;
 }
+.selected{
+    background-color: black;
+    color: white;
+}
