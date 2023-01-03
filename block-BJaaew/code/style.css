@@ -135,3 +135,7 @@ li{
 img{
   border-radius: 50%;
 }
+.active{
+  background-color: white;
+  color:black;
+}
